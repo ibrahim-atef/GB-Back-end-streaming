@@ -5,9 +5,9 @@ const { authenticateJWT, checkBlacklist } = require('../middleware/authMiddlewar
 const router = express.Router();
 
 // Upload content
-router.post('/upload', authenticateJWT, checkBlacklist, uploadContent);
+router.post('/upload',   uploadContent);
 
 // Stream content by ID
-router.get('/stream/:id', authenticateJWT, checkBlacklist, getContent);
+router.get('/stream/:id',   getContent);
 
 module.exports = router;
